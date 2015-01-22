@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     var coffeedocsrc = __dirname + '/../node_modules/coffeedoc/src';
     var coffeedoc = require(coffeedocsrc + '/coffeedoc');
     var parsers = require(coffeedocsrc + '/parsers');
-    var renderers = require(coffeedocsrc + '/renderers');
+    var renderers = require('./renderers');
 
 
     var cls, clspath, coffeedoc, fs, getSourceFiles, i, idx, ignore, index, module, moduleNames, modulepath, modules, o, opts, parser, parsercls, parsers, path, prefix, rendercls, renderer, rendererOpts, renderers, rm, s, script, source, sources, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
@@ -47,7 +47,8 @@ module.exports = function(grunt) {
       return false;
     }
     rendererOpts = {
-      hideprivate: argv['hidePrivate']
+      hideprivate: argv['hidePrivate'],
+      writer: grunt.file.write
     };
     if (argv.indexTemplate) {
       rendererOpts.indexTemplate = fs.readFileSync(argv.indexTemplate, 'utf-8');
