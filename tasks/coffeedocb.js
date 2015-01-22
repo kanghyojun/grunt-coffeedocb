@@ -167,7 +167,7 @@ module.exports = function(grunt) {
       rm(argv.output);
     }
     fs.mkdirSync(argv.output, '755');
-    fs.writeFile(path.join(argv.output, renderer.indexFile + renderer.extension), index);
+    grunt.file.write(path.join(argv.output, renderer.indexFile + renderer.extension), index);
     renderer.writeModules(modules, argv.output);
 
   });
