@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     var cls, clspath, coffeedoc, fs, getSourceFiles, i, idx, ignore, index, module, moduleNames, modulepath, modules, o, opts, parser, parsercls, parsers, path, prefix, rendercls, renderer, rendererOpts, renderers, rm, s, script, source, sources, _i, _j, _k, _len, _len1, _len2, _ref, _ref1, _ref2;
     var argv = this.options({
       output: 'docs',
-      ignore: '',
+      ignore: [],
       stdout: '',
       renderer: 'html',
       hidePrivate: false,

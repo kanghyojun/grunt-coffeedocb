@@ -46,7 +46,7 @@ Default value: `'docs'`
 Set output directory.
 
 #### options.ignore
-Type: `String`
+Type: `Array`
 
 Files or directories to ignore.
 
