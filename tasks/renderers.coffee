@@ -75,7 +75,6 @@ class HtmlRenderer extends CoffeedocRenderer
         return module
 
     writeModules: (modules, outputdir) =>
-        self = @
         # Recreate source directory structure and write module documentation.
         for module in modules
             docpath = outputdir
@@ -89,8 +88,8 @@ class HtmlRenderer extends CoffeedocRenderer
 
         # Write css resources.
         resourcesdir = path.join(outputdir, 'resources')
-        fs.mkdir resourcesdir, '755', =>
-            self.writer(path.join(resourcesdir, 'base.css'), this.baseCss)
+        fs.mkdirSync resourcesdir, '755'
+        @writer(path.join(resourcesdir, 'base.css'), this.baseCss)
 
 
 class GithubWikiRenderer extends CoffeedocRenderer
