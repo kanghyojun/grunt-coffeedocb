@@ -1,7 +1,7 @@
 {
   "name": "grunt-coffeedocb",
   "description": "coffeedoc plugin",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "homepage": "https://github.com/admire93/grunt-coffeedocb",
   "author": {
     "name": "Kang Hyojun",
